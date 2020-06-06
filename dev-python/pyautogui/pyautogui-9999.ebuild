@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3,4}} )
+PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3,4,5,6,7,8}} )
 inherit distutils-r1 git-r3  virtualx python-utils-r1
 
 DESCRIPTION="GUI automation Python module for human beings"
