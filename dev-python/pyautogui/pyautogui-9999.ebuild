@@ -1,9 +1,9 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3,4,5,6,7,8}} )
+PYTHON_COMPAT=( python3_{1,2,3,4,5,6,7,8} )
 inherit distutils-r1 git-r3  virtualx python-utils-r1
 
 DESCRIPTION="GUI automation Python module for human beings"
