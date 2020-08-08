@@ -26,9 +26,7 @@ RDEPEND="
 	>=sci-libs/scipy-1.0.1[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}
-	test? (
-		dev-python/nose[${PYTHON_USEDEP}]
-	)
+	test? (dev-python/nose[${PYTHON_USEDEP}])
 "
 
 python_test() {

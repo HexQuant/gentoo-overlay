@@ -23,7 +23,7 @@ RESTRICT=network-sandbox
 #dev-libs/kpathsea no mpl plots
 
 RDEPEND="
-  >=dev-python/async_generator-1.8[${PYTHON_USEDEP}]
+	>=dev-python/async_generator-1.8[${PYTHON_USEDEP}]
 	dev-python/entrypoints[${PYTHON_USEDEP}]
 	dev-python/alembic[${PYTHON_USEDEP}]
 	>=dev-python/async_generator-1.8[${PYTHON_USEDEP}]
@@ -44,10 +44,10 @@ RDEPEND="
 "
 
 src_prepare() {
-        einfo
+	einfo
 	einfo 'Note, allowing network access from the sandbox via RESTRICT=network-sandbox'
-        einfo '(needed for building jupyterhub assets via npm)'
-        einfo
+	einfo '(needed for building jupyterhub assets via npm)'
+	einfo
 	distutils-r1_src_prepare
 }
 

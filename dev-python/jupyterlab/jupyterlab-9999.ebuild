@@ -23,20 +23,20 @@ IUSE="+ipympl slurm"
 RDEPEND="
 	ipympl? ( >=net-libs/nodejs-14 )
 	>=dev-python/notebook-4.3.1[${PYTHON_USEDEP}]
-	>=dev-python/jinja-2[${PYTHON_USEDEP}]
+	>=dev-python/jinja-2.10[${PYTHON_USEDEP}]
 	>www-servers/tornado-6.0.2[${PYTHON_USEDEP}]
-	>=dev-python/jupyterlab-server-1.1.0[${PYTHON_USEDEP}]
+	>=dev-python/jupyterlab-server-1.1.5[${PYTHON_USEDEP}]
 	sys-apps/yarn
-  dev-python/ipydatawidgets[${PYTHON_USEDEP}]
+	dev-python/ipydatawidgets[${PYTHON_USEDEP}]
 	ipympl? ( dev-python/ipympl[${PYTHON_USEDEP}] )
 	slurm? ( dev-python/jupyterlab-slurm[${PYTHON_USEDEP}] )
 "
 
 src_prepare() {
-  einfo
+	einfo
 	einfo 'Note, allowing network access from the sandbox via RESTRICT=network-sandbox'
 	einfo '(needed for building jupyterlab assets via npm)'
-  einfo
+	einfo
 	distutils-r1_src_prepare
 }
 
@@ -44,7 +44,7 @@ python_compile() {
 	distutils-r1_python_compile
 	mkdir -p assets/lab
 	jupyter lab build --app-dir=${S}/assets/lab --debug
-  jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-datawidgets --app-dir=${S}/assets/lab --debug
+	jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-datawidgets --app-dir=${S}/assets/lab --debug
 	if use ipympl; then
 		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib --app-dir=${S}/assets/lab --debug
 	fi
