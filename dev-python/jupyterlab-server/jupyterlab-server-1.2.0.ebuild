@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="A set of server components for JupyterLab and JupyterLab like applications"
 HOMEPAGE="https://jupyter.org"
-SRC_URI="https://github.com/jupyterlab/jupyterlab_server/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/jupyterlab/jupyterlab_server/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
