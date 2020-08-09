@@ -5,12 +5,11 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-inherit distutils-r1 git-r3
+inherit distutils-r1
 
 DESCRIPTION="The JupyterLab notebook server extension"
 HOMEPAGE="https://jupyter.org"
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/jupyterlab/jupyterlab.git"
+SRC_URI="https://github.com/jupyterlab/jupyterlab/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
