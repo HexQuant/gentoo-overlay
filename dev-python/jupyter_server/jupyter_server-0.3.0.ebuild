@@ -19,7 +19,7 @@ RDEPEND="
 	>=dev-python/jinja-2[${PYTHON_USEDEP}]
 	>=www-servers/tornado-5.0[${PYTHON_USEDEP}]
 	dev-python/ipython_genutils[${PYTHON_USEDEP}]
-    dev-python/traitlets-4.2.1[${PYTHON_USEDEP}]
+    >=dev-python/traitlets-4.2.1[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_core-4.4.0[${PYTHON_USEDEP}]
     >=dev-python/jupyter_client-6.1.1[${PYTHON_USEDEP}]
     dev-python/nbformat[${PYTHON_USEDEP}]
