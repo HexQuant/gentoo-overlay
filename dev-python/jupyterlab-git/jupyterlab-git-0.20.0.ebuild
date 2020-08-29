@@ -11,7 +11,6 @@ DESCRIPTION="A JupyterLab extension for version control using Git"
 HOMEPAGE="https://github.com/jupyterlab/jupyterlab-git"
 SRC_URI="https://github.com/jupyterlab/jupyterlab-git/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -22,21 +21,30 @@ RDEPEND="
 	>=dev-python/jupyterlab-2.0[${PYTHON_USEDEP}]
 	>=dev-python/nbdime-2.0.0[${PYTHON_USEDEP}]
 	dev-python/pexpect[${PYTHON_USEDEP}]
-    >=dev-vcs/git-1.7.4[${PYTHON_USEDEP}]
+	>=dev-vcs/git-1.7.4
 "
 
+BDEPEND="${RDEPEND}"
+
 src_prepare() {
- 	distutils-r1_src_prepare
- }
+	einfo
+	einfo 'Note, allowing network access from the sandbox via RESTRICT=network-sandbox'
+	einfo '(needed for building jupyterlab assets via npm)'
+	einfo
+	distutils-r1_src_prepare
+}
 
- python_compile() {
- 	distutils-r1_python_compile
- }
+python_compile() {
+	distutils-r1_python_compile
+	jupyter serverextension enable --py jupyterlab_git
+	jupyter labextension install @jupyterlab/git
 
- python_install() {
- 	distutils-r1_python_install --skip-build
- }
+}
 
- python_install_all() {
- 	distutils-r1_python_install_all
- }
+#python_install() {
+#	distutils-r1_python_install --skip-build
+#}
+
+#python_install_all() {
+#	distutils-r1_python_install_all
+#}

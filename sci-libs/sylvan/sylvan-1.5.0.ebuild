@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
+
 inherit cmake-utils
 
 DESCRIPTION="Sylvan is a parallel (multi-core) MTBDD library written in C"
@@ -21,17 +22,17 @@ IUSE="doc examples test static-libs"
 RDEPEND=" "
 
 DEPEND="${RDEPEND}
-	    doc? ( dev-python/sphinx )
-        dev-libs/gmp
-        sys-apps/hwloc
+	doc? ( dev-python/sphinx )
+	dev-libs/gmp
+	sys-apps/hwloc
 "
 src_configure() {
 	cmake-utils_src_configure
 }
 
 src_compile() {
-    cmake-utils_src_compile
-    if use doc ; then
+	cmake-utils_src_compile
+	if use doc ; then
 		cd "${S}/docs"
 		emake SPHINXBUILD=sphinx-build html
 	fi
@@ -43,7 +44,7 @@ src_test() {
 
 
 src_install() {
-    cmake-utils_src_install
-    use doc && dohtml -r "${S}/doc/_build/html/"*
+	cmake-utils_src_install
+	use doc && dohtml -r "${S}/doc/_build/html/"*
 
 }

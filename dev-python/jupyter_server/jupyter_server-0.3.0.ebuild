@@ -19,15 +19,15 @@ RDEPEND="
 	>=dev-python/jinja-2[${PYTHON_USEDEP}]
 	>=www-servers/tornado-5.0[${PYTHON_USEDEP}]
 	dev-python/ipython_genutils[${PYTHON_USEDEP}]
-    >=dev-python/traitlets-4.2.1[${PYTHON_USEDEP}]
+	>=dev-python/traitlets-4.2.1[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_core-4.4.0[${PYTHON_USEDEP}]
-    >=dev-python/jupyter_client-6.1.1[${PYTHON_USEDEP}]
-    dev-python/nbformat[${PYTHON_USEDEP}]
+	>=dev-python/jupyter_client-6.1.1[${PYTHON_USEDEP}]
+	dev-python/nbformat[${PYTHON_USEDEP}]
 	dev-python/nbconvert[${PYTHON_USEDEP}]
 	dev-python/ipykernel[${PYTHON_USEDEP}]
 	dev-python/send2trash[${PYTHON_USEDEP}]
-    >=dev-python/terminado-0.8.3[${PYTHON_USEDEP}]
-    dev-python/prometheus_client[${PYTHON_USEDEP}]
+	>=dev-python/terminado-0.8.3[${PYTHON_USEDEP}]
+	dev-python/prometheus_client[${PYTHON_USEDEP}]
 	"
 src_unpack() {
 	default

@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{6..8} )
 
 inherit distutils-r1
 
@@ -22,12 +22,12 @@ IUSE="doc"
 RESTRICT="test"
 
 RDEPEND="
-    >=dev-python/pandas-0.23.0[${PYTHON_USEDEP}]
-    dev-python/lxml[${PYTHON_USEDEP}]
+	>=dev-python/pandas-0.23.0[${PYTHON_USEDEP}]
+	dev-python/lxml[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.19.0[${PYTHON_USEDEP}]
 	dev-python/wrapt[${PYTHON_USEDEP}]
 	doc? (
-        dev-python/matplotlib[${PYTHON_USEDEP}]
+		dev-python/matplotlib[${PYTHON_USEDEP}]
 		dev-python/ipython[${PYTHON_USEDEP}]
 	)
 "

@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-python/markdown-3.1.1[${PYTHON_USEDEP}]
 	>=dev-python/nbconvert-5.4[${PYTHON_USEDEP}]
 	>=dev-python/nbformat-4.2[${PYTHON_USEDEP}]
-    >=dev-python/newrelic-2.80.0.60[${PYTHON_USEDEP}]
+	>=dev-python/newrelic-2.80.0.60[${PYTHON_USEDEP}]
 	dev-python/pycurl[${PYTHON_USEDEP}]
 	dev-python/pylibmc[${PYTHON_USEDEP}]
 	dev-python/statsd[${PYTHON_USEDEP}]

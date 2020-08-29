@@ -13,7 +13,7 @@ SRC_URI="https://github.com/mwaskom/seaborn/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="

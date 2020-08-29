@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="
 	dev-python/notebook[${PYTHON_USEDEP}]
-	>=dev-python/jupyterlab-0.32[${PYTHON_USEDEP}]
+	>=dev-python/jupyterlab-1.0[${PYTHON_USEDEP}]
 "
 BDEPEND="${RDEPEND}"
 
