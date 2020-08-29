@@ -32,6 +32,6 @@ src_prepare() {
 
 python_compile() {
 	distutils-r1_python_compile
-	jupyter serverextension enable --sys-prefix jupyterlab_github
+	jupyter serverextension enable --py jupyterlab_github
 	jupyter labextension install @jupyterlab/github
 }
