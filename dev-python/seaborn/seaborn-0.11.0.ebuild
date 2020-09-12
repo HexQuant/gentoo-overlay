@@ -9,7 +9,7 @@ inherit distutils-r1 virtualx
 
 DESCRIPTION="Statistical data visualization"
 HOMEPAGE="https://seaborn.pydata.org"
-SRC_URI="https://github.com/mwaskom/seaborn/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/mwaskom/seaborn/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
