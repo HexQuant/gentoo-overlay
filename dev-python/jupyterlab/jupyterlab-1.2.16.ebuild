@@ -24,7 +24,7 @@ RDEPEND="
 	>=dev-python/notebook-4.3.1[${PYTHON_USEDEP}]
 	>=dev-python/jinja-2.10[${PYTHON_USEDEP}]
 	>www-servers/tornado-6.0.2[${PYTHON_USEDEP}]
-	>=dev-python/jupyterlab-server-1.0[${PYTHON_USEDEP}]
+	>=dev-python/jupyterlab_server-1.0[${PYTHON_USEDEP}]
 	sys-apps/yarn
 	dev-python/ipydatawidgets[${PYTHON_USEDEP}]
 	ipympl? ( dev-python/ipympl[${PYTHON_USEDEP}] )
