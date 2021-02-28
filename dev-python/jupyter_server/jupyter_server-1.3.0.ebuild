@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	>=dev-python/jinja-2[${PYTHON_USEDEP}]
-	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
+	>=www-servers/tornado-6.1[${PYTHON_USEDEP}]
 	>=dev-python/pyzmq-17[${PYTHON_USEDEP}]
 	dev-python/ipython_genutils[${PYTHON_USEDEP}]
 	>=dev-python/traitlets-4.2.1[${PYTHON_USEDEP}]

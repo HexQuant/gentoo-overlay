@@ -5,11 +5,11 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6..8} )
 
-inherit distutils-r1
+inherit distutils-r1 git-r3
 
 DESCRIPTION="The JupyterLab notebook server extension"
 HOMEPAGE="https://jupyter.org"
-SRC_URI="https://github.com/jupyterlab/jupyterlab/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+EGIT_REPO_URI="https://github.com/jupyterlab/jupyterlab.git"
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-python/jupyterlab_server-2.3[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_server-1.4[${PYTHON_USEDEP}]
 	dev-python/ipydatawidgets[${PYTHON_USEDEP}]
-	>=dev-python/jupyter-packaging-0.7.3
+	>=dev-python/jupyter-packaging-0.7.3[${PYTHON_USEDEP}]
 	>=dev-python/nbclassic-0.2[${PYTHON_USEDEP}]
 	ipympl? (
 		>=net-libs/nodejs-14

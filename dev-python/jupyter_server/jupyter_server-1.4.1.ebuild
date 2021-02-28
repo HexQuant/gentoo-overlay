@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	>=dev-python/jinja-2[${PYTHON_USEDEP}]
-	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
+	>=www-servers/tornado-6.1[${PYTHON_USEDEP}]
 	>=dev-python/pyzmq-17[${PYTHON_USEDEP}]
 	dev-python/ipython_genutils[${PYTHON_USEDEP}]
 	>=dev-python/traitlets-4.2.1[${PYTHON_USEDEP}]
@@ -28,6 +28,7 @@ RDEPEND="
 	dev-python/send2trash[${PYTHON_USEDEP}]
 	>=dev-python/terminado-0.8.3[${PYTHON_USEDEP}]
 	dev-python/prometheus_client[${PYTHON_USEDEP}]
+	>=dev-python/anyio-2.0.2[${PYTHON_USEDEP}]
 	"
 src_unpack() {
 	default
