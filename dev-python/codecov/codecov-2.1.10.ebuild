@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="Codecov Global Python Uploader"
 HOMEPAGE="https://codecov.io/"
-SRC_URI="https://github.com/codecov/codecov-python/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/codecov/codecov-python/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
