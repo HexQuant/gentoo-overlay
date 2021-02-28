@@ -21,12 +21,12 @@ REQUIRED_USE="cudd? sylvan? buddy?"
 
 DEPEND="${RDEPEND}
 	cudd? (
-		=sci-lib/cudd-3.0.0
+		>=sci-lib/cudd-3.0.0
 	)
 	sylvan? (
 		>=sci-lib/sylvan-1.4.1
 	)
 	buddy? (
-		=sci-lib/buddy-2.4-r1
+		>=sci-lib/buddy-2.4-r1
 	)
 "
