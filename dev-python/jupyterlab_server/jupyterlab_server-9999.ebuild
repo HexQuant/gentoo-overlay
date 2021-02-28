@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6..8} )
 
-inherit distutils-r1
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A set of server components for JupyterLab and JupyterLab like applications"
 HOMEPAGE="https://jupyter.org"
