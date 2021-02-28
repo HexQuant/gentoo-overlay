@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{6..9} )
 inherit distutils-r1 virtualx
 
 DESCRIPTION="A pure-Python package for manipulating BDDs and MDDs"
@@ -17,16 +17,20 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 IUSE="cudd sylvan buddy"
-REQUIRED_USE="cudd? sylvan? buddy?"
+#REQUIRED_USE="cudd? sylvan? buddy?"
 
 DEPEND="${RDEPEND}
+	>=dev-python/astutils-0.0.1[${PYTHON_USEDEP}
+	>=dev-python/ply-3.4[${PYTHON_USEDEP}]
+	>=dev-python/psutil-3.2.2[${PYTHON_USEDEP}]
+	>=dev-python/pydot-1.2.2[${PYTHON_USEDEP}]
 	cudd? (
-		>=sci-lib/cudd-3.0.0
+		>=sci-libs/cudd-3.0.0
 	)
 	sylvan? (
-		>=sci-lib/sylvan-1.4.1
+		>=sci-libs/sylvan-1.4.1
 	)
 	buddy? (
-		>=sci-lib/buddy-2.4-r1
+		>=sci-libs/buddy-2.4-r1
 	)
 "

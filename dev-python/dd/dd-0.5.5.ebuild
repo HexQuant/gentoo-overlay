@@ -17,16 +17,16 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 IUSE="cudd sylvan buddy"
-REQUIRED_USE="cudd? sylvan? buddy?"
+#REQUIRED_USE="cudd? sylvan? buddy?"
 
 DEPEND="${RDEPEND}
 	cudd? (
-		=sci-lib/cudd-3.0.0
+		=sci-libs/cudd-3.0.0
 	)
 	sylvan? (
-		>=sci-lib/sylvan-1.4.1
+		>=sci-libs/sylvan-1.4.1
 	)
 	buddy? (
-		=sci-lib/buddy-2.4-r1
+		=sci-libs/buddy-2.4-r1
 	)
 "
