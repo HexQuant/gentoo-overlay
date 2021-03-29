@@ -20,7 +20,7 @@ IUSE="cudd sylvan buddy"
 #REQUIRED_USE="cudd? sylvan? buddy?"
 
 DEPEND="${RDEPEND}
-	>=dev-python/astutils-0.0.1[${PYTHON_USEDEP}
+	>=dev-python/astutils-0.0.1[${PYTHON_USEDEP}]
 	>=dev-python/ply-3.4[${PYTHON_USEDEP}]
 	>=dev-python/psutil-3.2.2[${PYTHON_USEDEP}]
 	>=dev-python/pydot-1.2.2[${PYTHON_USEDEP}]

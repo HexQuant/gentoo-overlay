@@ -5,11 +5,19 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6..8} )
 
-inherit distutils-r1 git-r3
+
+if [[ "${PV}" = *9999* ]]; then
+	inherit distutils-r1 git-r3
+
+	EGIT_REPO_URI="https://github.com/jupyterlab/jupyterlab.git"
+else
+	inherit distutils-r1
+	SRC_URI="https://github.com/jupyterlab/jupyterlab/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+fi
+
 
 DESCRIPTION="The JupyterLab notebook server extension"
 HOMEPAGE="https://jupyter.org"
-EGIT_REPO_URI="https://github.com/jupyterlab/jupyterlab.git"
 
 LICENSE="BSD-2"
 SLOT="0"
