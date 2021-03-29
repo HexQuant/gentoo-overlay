@@ -38,7 +38,7 @@ RDEPEND="
 	"
 src_unpack() {
 	default
-	mv * ${P}
+#	mv * ${P}
 }
 
 src_prepare() {
