@@ -3,6 +3,8 @@
 
 **Gentoo Linux Personal Overlay**
 
+[![repoman](https://github.com/HexQuant/gentoo-overlay/workflows/repoman/badge.svg)](https://github.com/HexQuant/gentoo-overlay/actions?query=workflow%3Arepoman)
+
 Mostly there are packages for analytics (python) and automation.
 
 **Installation**
