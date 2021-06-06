@@ -8,7 +8,6 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="GUI automation Python module for human beings"
 HOMEPAGE="https://github.com/asweigart/pyautogui"
-SRC_URI=""
 EGIT_REPO_URI="https://github.com/jasweigart/pyautogui.git"
 SLOT="0"
 LICENSE="BSD"

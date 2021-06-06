@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="A core services, APIs, and REST endpoints—to Jupyter web applications"
 HOMEPAGE="https://github.com/jupyter/jupyter_server"
 
-PYTHON_COMPAT=( python3_{6..8} )
+PYTHON_COMPAT=( python3_{6..9} )
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
