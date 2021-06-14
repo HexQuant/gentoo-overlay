@@ -10,7 +10,7 @@ inherit distutils-r1
 DESCRIPTION="New Relic Python Agent"
 HOMEPAGE="http://newrelic.com/docs/python/new-relic-for-python"
 SRC_URI="https://github.com//newrelic/newrelic-python-agent/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-LICENSE="Apache-2.0 License"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""

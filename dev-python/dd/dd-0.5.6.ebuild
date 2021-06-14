@@ -16,7 +16,7 @@ SLOT="0"
 
 KEYWORDS="~amd64"
 
-IUSE="cudd sylvan buddy"
+IUSE="-cudd -sylvan -buddy"
 #REQUIRED_USE="cudd? sylvan? buddy?"
 
 DEPEND="${RDEPEND}

@@ -5,7 +5,6 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6..9} )
 
-
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
 
@@ -14,7 +13,6 @@ else
 	inherit distutils-r1
 	SRC_URI="https://github.com/jupyterlab/jupyterlab/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
-
 
 DESCRIPTION="The JupyterLab notebook server extension"
 HOMEPAGE="https://jupyter.org"
@@ -29,8 +27,8 @@ IUSE="+ipympl slurm"
 
 RDEPEND="
 	>=dev-python/notebook-4.3.1[${PYTHON_USEDEP}]
-	>=dev-python/jinja-2.10[${PYTHON_USEDEP}]
-	>=www-servers/tornado-6.1[${PYTHON_USEDEP}]
+	>=dev-python/jinja-2.1[${PYTHON_USEDEP}]
+	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
 	>=dev-python/jupyterlab_server-2.3[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_server-1.4[${PYTHON_USEDEP}]
 	dev-python/ipydatawidgets[${PYTHON_USEDEP}]
@@ -56,20 +54,20 @@ src_prepare() {
 python_compile() {
 	distutils-r1_python_compile
 	mkdir -p assets/lab
-	jupyter lab build --app-dir=${S}/assets/lab --debug
-	jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-datawidgets --app-dir=${S}/assets/lab --debug
+	jupyter lab build --app-dir="${S}"/assets/lab --debug
+	jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-datawidgets --app-dir="${S}"/assets/lab --debug
 	if use ipympl; then
-		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib --app-dir=${S}/assets/lab --debug
+		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib --app-dir="${S}"/assets/lab --debug
 	fi
 	if use slurm; then
-		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyterlab-slurm --app-dir=${S}/assets/lab --debug
+		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyterlab-slurm --app-dir="${S}"/assets/lab --debug
 	fi
-	cd ${S}/assets/lab/staging
+	cd "${S}"/assets/lab/staging
 }
 
 python_install() {
-	mkdir ${D}/usr/share/jupyter/lab -p
-	cp -ar ${S}/assets/lab/* ${D}/usr/share/jupyter/lab/
+	mkdir "${D}"/usr/share/jupyter/lab -p
+	cp -ar "${S}"/assets/lab/* "${D}"/usr/share/jupyter/lab/
 	distutils-r1_python_install --skip-build
 }
 

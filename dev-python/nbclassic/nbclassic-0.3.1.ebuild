@@ -10,7 +10,7 @@ DESCRIPTION="NBClassic runs the Jupyter Notebook frontend on the Jupyter Server 
 HOMEPAGE="https://github.com/jupyterlab/nbclassic"
 SRC_URI="https://github.com/jupyterlab/nbclassic/archive/${PV}.tar.gz"
 
-LICENSE="BSD-3"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 

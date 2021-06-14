@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>kvover@gmail.com</email>
+<name>v_0ver</name>
+</maintainer>
+<upstream>
+    <bugs-to>https://github.com/codecov/codecov-python/issues</bugs-to>
+    <remote-id type="github">codecov/codecov-python</remote-id>
+</upstream>
+</pkgmetadata>

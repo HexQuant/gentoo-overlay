@@ -21,8 +21,8 @@ IUSE="+ipympl slurm"
 
 RDEPEND="
 	>=dev-python/notebook-4.3.1[${PYTHON_USEDEP}]
-	>=dev-python/jinja-2.10[${PYTHON_USEDEP}]
-	>=www-servers/tornado-6.1[${PYTHON_USEDEP}]
+	>=dev-python/jinja-2.1[${PYTHON_USEDEP}]
+	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
 	>=dev-python/jupyterlab_server-2.3[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_server-1.4[${PYTHON_USEDEP}]
 	dev-python/ipydatawidgets[${PYTHON_USEDEP}]

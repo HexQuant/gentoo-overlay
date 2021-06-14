@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -16,7 +16,6 @@ else
 	SRC_URI="https://github.com/axelfahy/jupyterlab-vim/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -24,15 +23,12 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 	>=dev-python/jupyterlab-3.0[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_jupyter_packaging-0.9[${PYTHON_USEDEP}]
-
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
-
 
 python_compile() {
 	distutils-r1_python_compile
 	jupyter serverextension enable --py jupyterlab_vim
 	jupyter labextension install @axlair/jupyterlab_vim
-
 }

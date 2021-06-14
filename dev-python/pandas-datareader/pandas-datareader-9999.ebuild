@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{6..9} )
 inherit distutils-r1 git-r3
 
 DESCRIPTION="Pandas DataFrame extraction from a wide range of Internet sources"
-
+HOMEPAGE="https://github.com/pydata/pandas-datareader"
 EGIT_REPO_URI="https://github.com/pydata/pandas-datareader.git"
 
 LICENSE="BSD"

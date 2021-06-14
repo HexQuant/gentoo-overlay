@@ -11,7 +11,7 @@ DESCRIPTION="Simple LDAP Authenticator Plugin for JupyterHub"
 HOMEPAGE="https://github.com/jupyterhub/ldapauthenticator"
 SRC_URI="https://github.com/jupyterhub/ldapauthenticator/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="BSD-3"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 

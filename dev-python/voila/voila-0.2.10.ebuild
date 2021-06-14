@@ -15,10 +15,10 @@ else
 	SRC_URI="https://github.com/voila-dashboards/voila/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
-DESCRIPTION="Voilà turns Jupyter notebooks into standalone web applications"
+DESCRIPTION="Voila turns Jupyter notebooks into standalone web applications"
 HOMEPAGE="https://github.com/voila-dashboards/voila"
 
-LICENSE="BSD-3-Clause"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 

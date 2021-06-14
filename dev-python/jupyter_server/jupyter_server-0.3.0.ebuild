@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{6..8} )
 
 inherit distutils-r1
 
-DESCRIPTION="A core services, APIs, and REST endpoints—to Jupyter web applications"
+DESCRIPTION="A core services, APIs, and REST endpoints to Jupyter web applications"
 HOMEPAGE="https://github.com/jupyter/jupyter_server"
 SRC_URI="https://github.com/jupyter/jupyter_server/archive/${PV}.tar.gz -> ${P}.tar.gz"
 

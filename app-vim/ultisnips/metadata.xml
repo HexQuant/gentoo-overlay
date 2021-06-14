@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>kvover@gmail.com</email>
+<name>v_0ver</name>
+</maintainer>
+<upstream>
+	<bugs-to>https://github.com/SirVer/ultisnips/issues</bugs-to>
+    <remote-id type="github">SirVer/ultisnips</remote-id>
+ </upstream>
+<longdescription lang="en">
+UltiSnips is the ultimate solution for snippets in Vim. It has many features, speed being one of them.
+</longdescription>
+</pkgmetadata>

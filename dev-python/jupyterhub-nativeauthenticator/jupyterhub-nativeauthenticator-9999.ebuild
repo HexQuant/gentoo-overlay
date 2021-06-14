@@ -11,7 +11,7 @@ DESCRIPTION="A simple authenticator for small-medium size JupyterHub application
 HOMEPAGE="https://github.com/jupyterhub/nativeauthenticator"
 EGIT_REPO_URI="https://github.com/jupyterhub/nativeauthenticator.git"
 
-LICENSE="BSD-3"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="-test"
