@@ -23,7 +23,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	>=dev-python/jinja-2[${PYTHON_USEDEP}]
-	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
+	>=www-servers/tornado-6.1[${PYTHON_USEDEP}]
 	>=dev-python/pyzmq-17[${PYTHON_USEDEP}]
 	dev-python/argon2-cffi[${PYTHON_USEDEP}]
 	dev-python/ipython_genutils[${PYTHON_USEDEP}]
@@ -38,6 +38,7 @@ RDEPEND="
 	>=dev-python/anyio-3.1.0[${PYTHON_USEDEP}]
 	<dev-python/anyio-4[${PYTHON_USEDEP}]
 	dev-python/websocket-client[${PYTHON_USEDEP}]
+	dev-python/requests-unixsocket[${PYTHON_USEDEP}]
 	"
 src_unpack() {
 	default
