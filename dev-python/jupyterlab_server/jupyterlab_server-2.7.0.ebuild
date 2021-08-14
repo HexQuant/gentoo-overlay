@@ -13,7 +13,7 @@ if [[ "${PV}" = *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/jupyterlab/jupyterlab_server.git"
 else
 	inherit distutils-r1
-	SRC_URI="https://github.com/jupyterlab/jupyterlab_server/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/jupyterlab/jupyterlab_server/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 LICENSE="BSD-2"
