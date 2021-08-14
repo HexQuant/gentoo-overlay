@@ -6,8 +6,8 @@ EAPI=8
 DESCRIPTION="JupyterLab Extension to share the URL to a running Jupyter Server"
 HOMEPAGE="https://github.com/jupyterlab-contrib/jupyterlab-link-share"
 
+PYTHON_COMPAT=( python3_{6..9} )
 
-PYTHON_COMPAT=( python3_9 )
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
 
