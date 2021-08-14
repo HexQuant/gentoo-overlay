@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{7..9} )
 
 DESCRIPTION="Statistical data visualization"
 HOMEPAGE="https://seaborn.pydata.org"
@@ -22,10 +22,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="statsmodels fastcluster"
 
 RDEPEND="
-	>=dev-python/matplotlib-2.2[${PYTHON_USEDEP}]
-	>=dev-python/numpy-1.15[${PYTHON_USEDEP}]
-	>=dev-python/pandas-0.23[${PYTHON_USEDEP}]
-	>=dev-python/scipy-1.0[${PYTHON_USEDEP}]
+	>=dev-python/matplotlib-3.0[${PYTHON_USEDEP}]
+	>=dev-python/numpy-1.16[${PYTHON_USEDEP}]
+	>=dev-python/pandas-0.24[${PYTHON_USEDEP}]
+	>=dev-python/scipy-1.2[${PYTHON_USEDEP}]
 	statsmodels? (
 		>=dev-python/statsmodels-0.9[${PYTHON_USEDEP}]
 	)

@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_{6..9} )
 
@@ -26,7 +26,7 @@ IUSE=""
 RDEPEND="
 	dev-python/notebook[${PYTHON_USEDEP}]
 	>=dev-python/jupyterlab-3.0[${PYTHON_USEDEP}]
-	>=dev-python/nbdime-3.0.0[${PYTHON_USEDEP}]
+	>=dev-python/nbdime-3.1.0[${PYTHON_USEDEP}]
 	dev-python/nbformat[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
 	dev-python/pexpect[${PYTHON_USEDEP}]

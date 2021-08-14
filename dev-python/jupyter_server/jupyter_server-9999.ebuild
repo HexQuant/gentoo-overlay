@@ -1,8 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
+EAPI=8
 
 DESCRIPTION="A core services, APIs, and REST endpoints - to Jupyter web applications"
 HOMEPAGE="https://github.com/jupyter/jupyter_server"
@@ -23,7 +22,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	>=dev-python/jinja-2[${PYTHON_USEDEP}]
-	>=www-servers/tornado-6.1[${PYTHON_USEDEP}]
+	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
 	>=dev-python/pyzmq-17[${PYTHON_USEDEP}]
 	dev-python/argon2-cffi[${PYTHON_USEDEP}]
 	dev-python/ipython_genutils[${PYTHON_USEDEP}]

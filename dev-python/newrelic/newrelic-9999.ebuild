@@ -1,11 +1,9 @@
 # Copyright 1999-2021 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_{6..9} )
-
-inherit distutils-r1
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
@@ -15,7 +13,6 @@ else
     inherit distutils-r1
 	SRC_URI="https://github.com//newrelic/newrelic-python-agent/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
-
 
 DESCRIPTION="New Relic Python Agent"
 HOMEPAGE="http://newrelic.com/docs/python/new-relic-for-python"
