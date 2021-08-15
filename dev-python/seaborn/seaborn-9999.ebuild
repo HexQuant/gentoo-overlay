@@ -18,8 +18,8 @@ fi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="statsmodels fastcluster"
+KEYWORDS="~amd64"
+IUSE="+statsmodels +fastcluster"
 
 RDEPEND="
 	>=dev-python/matplotlib-3.0[${PYTHON_USEDEP}]
@@ -29,7 +29,7 @@ RDEPEND="
 	statsmodels? (
 		>=dev-python/statsmodels-0.9[${PYTHON_USEDEP}]
 	)
-	fastclusterd? (
+	fastcluster? (
 		dev-python/fastcluster[${PYTHON_USEDEP}]
 	)
 "

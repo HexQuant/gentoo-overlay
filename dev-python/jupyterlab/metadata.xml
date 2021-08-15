@@ -4,5 +4,6 @@
  <use>
     <flag name="ipympl">To enable the ipympl backend, simply use the matplotlib Jupyter magic.</flag>
     <flag name="slurm">Support Slurm Workload Manager.</flag>
+    <flag name="collaborative">Collaboration support</flag>
   </use>
 </pkgmetadata>

@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -27,10 +27,10 @@ RDEPEND="
 BDEPEND="${RDEPEND}"
 
 src_prepare() {
-	einfo
+	einfo ''
 	einfo 'Note, allowing network access from the sandbox via RESTRICT=network-sandbox'
 	einfo '(needed for building jupyterlab assets via npm)'
-	einfo
+	einfo ''
 	distutils-r1_src_prepare
 }
 

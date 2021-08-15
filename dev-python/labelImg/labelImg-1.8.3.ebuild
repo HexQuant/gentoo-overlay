@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/tzutalin/labelImg"
 SRC_URI="https://github.com/tzutalin/labelImg/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="

@@ -6,20 +6,16 @@ EAPI=7
 inherit cmake-utils
 
 DESCRIPTION="Sylvan is a parallel (multi-core) MTBDD library written in C"
-
 HOMEPAGE="https://trolando.github.io/sylvan/"
 
 SRC_URI="https://github.com/trolando/sylvan/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-
 SLOT="0"
-
 KEYWORDS="~amd64"
-
 IUSE="doc examples test static-libs"
 
-RDEPEND=" "
+RDEPEND=""
 
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
@@ -42,9 +38,8 @@ src_test() {
 	cmake-utils_src_test
 }
 
-
 src_install() {
 	cmake-utils_src_install
-	use doc && dohtml -r "${S}/doc/_build/html/"*
+	use doc && dohtml -r "${S}/doc/_build/html/*"
 
 }

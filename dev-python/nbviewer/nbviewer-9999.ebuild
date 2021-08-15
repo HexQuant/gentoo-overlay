@@ -14,7 +14,6 @@ KEYWORDS="~amd64"
 LICENSE="BSD"
 SLOT="0"
 IUSE="-newrelic"
-
 RDEPEND="
 	dev-python/elasticsearch-py[${PYTHON_USEDEP}]
 	>=dev-python/ipython-4.0.0[notebook,${PYTHON_USEDEP}]
@@ -23,12 +22,14 @@ RDEPEND="
 	>=dev-python/markdown-3.1.1[${PYTHON_USEDEP}]
 	>=dev-python/nbconvert-5.4[${PYTHON_USEDEP}]
 	>=dev-python/nbformat-4.2[${PYTHON_USEDEP}]
-	>=dev-python/newrelic-2.80.0.60[${PYTHON_USEDEP}]
+	newrelic? (	>dev-python/newrelic-2.80.0.60[${PYTHON_USEDEP}] )
 	dev-python/pycurl[${PYTHON_USEDEP}]
 	dev-python/pylibmc[${PYTHON_USEDEP}]
 	dev-python/statsd[${PYTHON_USEDEP}]
 	>=www-servers/tornado-6.0[${PYTHON_USEDEP}]
 	"
+	#<dev-python/nbconvert-6.0.0[${PYTHON_USEDEP}]
+
 DEPEND="${RDEPEND}"
 src_prepare() {
 	distutils-r1_src_prepare

@@ -5,4 +5,8 @@
 <email>kvover@gmail.com</email>
 <name>v_0ver</name>
 </maintainer>
+<use>
+	<flag name="statsmodels">Optional dependence statsmodels, for advanced regression plots</flag>
+	<flag name="fastcluster">Optional dependence fastcluster, for clustering large matrices</flag>
+</use>
 </pkgmetadata>

@@ -3,7 +3,6 @@
 
 EAPI=7
 
-
 #The package does not officially support python 3.7 or higher
 PYTHON_COMPAT=( python3_{6..9} )
 inherit distutils-r1

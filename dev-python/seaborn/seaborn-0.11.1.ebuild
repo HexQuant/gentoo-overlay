@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=8
+EAPI=7
 
 PYTHON_COMPAT=( python3_{6..9} )
 
@@ -18,8 +18,8 @@ fi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="statsmodels fastcluster"
+KEYWORDS="~amd64"
+IUSE="+statsmodels +fastcluster"
 
 RDEPEND="
 	>=dev-python/matplotlib-2.2[${PYTHON_USEDEP}]
@@ -29,7 +29,7 @@ RDEPEND="
 	statsmodels? (
 		>=dev-python/statsmodels-0.9[${PYTHON_USEDEP}]
 	)
-	fastclusterd? (
+	fastcluster? (
 		dev-python/fastcluster[${PYTHON_USEDEP}]
 	)
 "

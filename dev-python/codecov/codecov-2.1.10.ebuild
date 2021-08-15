@@ -12,16 +12,16 @@ SRC_URI="https://github.com/codecov/codecov-python/archive/v${PV}.tar.gz -> ${P}
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="-test"
 
 DEPEND="
 	>=dev-python/requests-2.7.9[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
+	"
+RDEPEND="${DEPEND}"
+BDEPEND="
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/pytest[${PYTHON_USEDEP}]
-	)
-"
-RDEPEND="${DEPEND}"
-BDEPEND="${DEPEND}"
+	)"

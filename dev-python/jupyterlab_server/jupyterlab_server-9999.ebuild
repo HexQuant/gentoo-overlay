@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{7..9} )
 
 DESCRIPTION="A set of server components for JupyterLab and JupyterLab like applications"
 HOMEPAGE="https://jupyter.org"

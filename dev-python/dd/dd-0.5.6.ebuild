@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	>=dev-python/psutil-3.2.2[${PYTHON_USEDEP}]
 	>=dev-python/pydot-1.2.2[${PYTHON_USEDEP}]
 	cudd? (
-		>=sci-libs/cudd-3.0.0
+		>=sci-libs/cudd-3
 	)
 	sylvan? (
 		>=sci-libs/sylvan-1.4.1

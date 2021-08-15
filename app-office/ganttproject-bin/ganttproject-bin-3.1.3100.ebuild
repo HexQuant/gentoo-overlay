@@ -1,13 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation 
-# Distributed under the terms of the GNU General Public License v2 
+# Copyright 1999-2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit eutils
 
 REV="r2179"
-MY_P=${PN/-bin}-${PV} 
-DESCRIPTION="A tool for creating a project schedule by means of Gantt chart and resource load chart" 
+MY_P=${PN/-bin}-${PV}
+DESCRIPTION="Free desktop project scheduling app"
 HOMEPAGE="http://ganttproject.sourceforge.net/"
 #SRC_URI="https://dl.ganttproject.biz/${MY_P}/${MY_P}-${REV}.zip" 
 SRC_URI="https://github.com/bardsoftware/ganttproject/archive/ganttproject-${PV}.tar.gz -> ${P}.tar.gz"

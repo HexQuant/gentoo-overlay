@@ -22,10 +22,9 @@ IUSE="+ipympl slurm"
 RDEPEND="
 	>=dev-python/notebook-4.3.1[${PYTHON_USEDEP}]
 	>=dev-python/jinja-2.1[${PYTHON_USEDEP}]
-	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
+	>=www-servers/tornado-6.1[${PYTHON_USEDEP}]
 	>=dev-python/jupyterlab_server-2.3[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_server-1.4[${PYTHON_USEDEP}]
-	dev-python/ipydatawidgets[${PYTHON_USEDEP}]
 	>=dev-python/jupyter-packaging-0.7.3
 	>=dev-python/nbclassic-0.2[${PYTHON_USEDEP}]
 	ipympl? (
@@ -38,30 +37,30 @@ RDEPEND="
 "
 
 src_prepare() {
-	einfo
-	einfo 'Note, allowing network access from the sandbox via RESTRICT=network-sandbox'
-	einfo '(needed for building jupyterlab assets via npm)'
-	einfo
+	einfo ""
+	einfo "Note, allowing network access from the sandbox via RESTRICT=network-sandbox"
+	einfo "(needed for building jupyterlab assets via npm)"
+	einfo ""
 	distutils-r1_src_prepare
 }
 
 python_compile() {
 	distutils-r1_python_compile
 	mkdir -p assets/lab
-	jupyter lab build --app-dir=${S}/assets/lab --debug
-	jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-datawidgets --app-dir=${S}/assets/lab --debug
+	jupyter lab build --app-dir="${S}/assets/lab" --debug
+	jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-datawidgets --app-dir="${S}/assets/lab" --debug
 	if use ipympl; then
-		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib --app-dir=${S}/assets/lab --debug
+		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib --app-dir="${S}/assets/lab" --debug
 	fi
 	if use slurm; then
-		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyterlab-slurm --app-dir=${S}/assets/lab --debug
+		jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyterlab-slurm --app-dir="${S}/assets/lab" --debug
 	fi
-	cd ${S}/assets/lab/staging
+	cd "${S}/assets/lab/staging"
 }
 
 python_install() {
-	mkdir ${D}/usr/share/jupyter/lab -p
-	cp -ar ${S}/assets/lab/* ${D}/usr/share/jupyter/lab/
+	mkdir "${D}/usr/share/jupyter/lab" -p
+	cp -ar "${S}/assets/lab/*" "${D}/usr/share/jupyter/lab/"
 	distutils-r1_python_install --skip-build
 }
 

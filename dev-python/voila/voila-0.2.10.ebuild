@@ -5,7 +5,6 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6..9} )
 
-
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
 
@@ -20,7 +19,7 @@ HOMEPAGE="https://github.com/voila-dashboards/voila"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 RESTRICT=network-sandbox
 
@@ -40,8 +39,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-
-
 src_prepare() {
 	einfo
 	einfo 'Note, allowing network access from the sandbox via RESTRICT=network-sandbox'
@@ -49,7 +46,6 @@ src_prepare() {
 	einfo
 	distutils-r1_src_prepare
 }
-
 
 #python_compile() {
 	#distutils-r1_python_compile
@@ -66,9 +62,7 @@ src_prepare() {
 	#distutils-r1_python_install --skip-build
 #}
 
-
 #python_install_all() {
-
 
 	#insinto /etc/
 	#doins -r etc/.

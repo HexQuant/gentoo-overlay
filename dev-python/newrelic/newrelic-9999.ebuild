@@ -22,8 +22,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/setuptools_scm-3.2[${PYTHON_USEDEP}]
-	<dev-python/setuptools_scm-4[${PYTHON_USEDEP}]
+	dev-python/setuptools_scm[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"
 

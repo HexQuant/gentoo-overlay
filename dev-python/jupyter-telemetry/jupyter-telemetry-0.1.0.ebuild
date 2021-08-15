@@ -1,0 +1,23 @@
+# Copyright 2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+PYTHON_COMPAT=( python3_{6..9} )
+
+inherit distutils-r1
+
+DESCRIPTION="Telemetry for Jupyter Applications and extensions"
+HOMEPAGE="https://github.com/jupyter/telemetry"
+SRC_URI="mirror://pypi/${PN:0:1}/jupyter_telemetry/jupyter_telemetry-${PV}.tar.gz -> ${P}.tar.gz"
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="~amd64"
+
+RDEPEND="\
+	dev-python/ruamel-yaml[${PYTHON_USEDEP}] \
+	dev-python/jsonschema[${PYTHON_USEDEP}] \
+	dev-python/python-json-logger[${PYTHON_USEDEP}] \
+	dev-python/traitlets[${PYTHON_USEDEP}] \
+"
