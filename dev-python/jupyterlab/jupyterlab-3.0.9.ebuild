@@ -25,7 +25,7 @@ RDEPEND="
 	>=www-servers/tornado-6.1[${PYTHON_USEDEP}]
 	>=dev-python/jupyterlab_server-2.3[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_server-1.4[${PYTHON_USEDEP}]
-	>=dev-python/jupyter-packaging-0.7.3
+	>=dev-python/jupyter_packaging-0.7.3
 	>=dev-python/nbclassic-0.2[${PYTHON_USEDEP}]
 	ipympl? (
 		>=net-libs/nodejs-14
