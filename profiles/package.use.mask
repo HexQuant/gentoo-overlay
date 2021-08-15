@@ -1,1 +1,1 @@
-dev-python/jupyter-packaging
+=dev-python/jupyter-packaging-*
