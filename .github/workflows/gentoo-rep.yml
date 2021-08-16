@@ -1,19 +1,9 @@
 
 name: gentoo-rep
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-  schedule:
-    - cron: '0 0 * * *'
-
+on: [push, pull_request]
 jobs:
-  build:
+  repoman:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: gentoo-repoman
-      uses: gentoo-monero/repoman-action@v1
-  
+      - uses: actions/checkout@v2
+      - uses: gentoo-monero/repoman-action@v1
