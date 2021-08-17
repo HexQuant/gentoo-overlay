@@ -1,9 +1,8 @@
-
 name: gentoo-rep
 on: [push, pull_request]
 jobs:
-  repoman:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: gentoo-monero/repoman-action@v1
+    repoman:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: lucianposton/repoman-ebuild
