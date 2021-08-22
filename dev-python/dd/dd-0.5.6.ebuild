@@ -16,8 +16,9 @@ SLOT="0"
 
 KEYWORDS="~amd64"
 
-IUSE="-cudd -sylvan -buddy"
+IUSE="cudd sylvan buddy"
 #REQUIRED_USE="cudd? sylvan? buddy?"
+#RESTRICT="!test? ( test )"
 
 DEPEND="${RDEPEND}
 	>=dev-python/astutils-0.0.1[${PYTHON_USEDEP}]

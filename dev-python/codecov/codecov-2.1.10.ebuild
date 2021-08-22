@@ -13,8 +13,8 @@ SRC_URI="https://github.com/codecov/codecov-python/archive/v${PV}.tar.gz -> ${P}
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="-test"
-
+IUSE="test"
+#RESTRICT="!test? ( test )"
 DEPEND="
 	>=dev-python/requests-2.7.9[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]

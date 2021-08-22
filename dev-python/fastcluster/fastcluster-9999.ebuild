@@ -20,7 +20,8 @@ fi
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="-test"
+IUSE="test"
+#RESTRICT="!test? ( test )"
 
 DEPEND="
 	>=dev-python/numpy-1.9[${PYTHON_USEDEP}]

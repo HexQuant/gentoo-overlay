@@ -5,8 +5,6 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6..9} )
 
-inherit distutils-r1
-
 DESCRIPTION="A multi-user server for Jupyter notebooks"
 HOMEPAGE="https://github.com/jupyterhub/jupyterhub"
 
