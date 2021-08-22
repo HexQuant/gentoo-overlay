@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/asweigart/pyautogui"
 EGIT_REPO_URI="https://github.com/jasweigart/pyautogui.git"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="

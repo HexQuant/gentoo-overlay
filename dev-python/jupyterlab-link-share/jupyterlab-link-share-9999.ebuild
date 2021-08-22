@@ -19,7 +19,7 @@ fi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 DEPEND="
 	>=dev-python/jupyter-packaging-0.10.1[${PYTHON_USEDEP}]

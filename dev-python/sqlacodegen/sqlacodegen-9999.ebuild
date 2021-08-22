@@ -17,7 +17,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 DEPEND="
 	>=dev-python/sqlalchemy-1.3.0[${PYTHON_USEDEP}]

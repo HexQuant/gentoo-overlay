@@ -19,7 +19,7 @@ HOMEPAGE="https://jupyter.org"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 IUSE="ipympl slurm collaborative"
 

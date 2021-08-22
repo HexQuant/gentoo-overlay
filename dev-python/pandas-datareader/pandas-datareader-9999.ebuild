@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/pydata/pandas-datareader.git"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 IUSE="doc"
 

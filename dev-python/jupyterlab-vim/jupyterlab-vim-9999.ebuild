@@ -18,7 +18,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 DEPEND="
 	>=dev-python/jupyterlab-3.0[${PYTHON_USEDEP}]

@@ -19,7 +19,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE="-test"
 
 DEPEND="dev-python/six[${PYTHON_USEDEP}]"

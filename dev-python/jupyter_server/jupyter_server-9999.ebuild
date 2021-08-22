@@ -18,7 +18,7 @@ fi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 RDEPEND="
 	>=dev-python/jinja-2[${PYTHON_USEDEP}]
