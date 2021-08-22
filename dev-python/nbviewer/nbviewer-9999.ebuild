@@ -4,11 +4,16 @@
 EAPI=7
 PYTHON_COMPAT=( python3_{6..9} )
 
-inherit distutils-r1 git-r3
-
 DESCRIPTION="Nbconvert as a webservice (rendering ipynb to static HTML)"
 HOMEPAGE="https://nbviewer.jupyter.org/"
-EGIT_REPO_URI="https://github.com/jupyter/nbviewer.git"
+if [[ "${PV}" = *9999* ]]; then
+	inherit distutils-r1 git-r3
+	EGIT_REPO_URI="https://github.com/jupyter/nbviewer.git"
+else
+	inherit distutils-r1
+	SRC_URI="https://github.com/jupyter/nbviewer/archive/${PV}.tar.gz -> ${P}.tar.gz"
+fi
+
 KEYWORDS=""
 
 LICENSE="BSD"
