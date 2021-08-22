@@ -18,7 +18,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-python/jupyterlab-3[${PYTHON_USEDEP}]

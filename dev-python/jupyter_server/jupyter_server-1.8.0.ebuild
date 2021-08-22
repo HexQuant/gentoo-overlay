@@ -3,7 +3,6 @@
 
 EAPI=7
 
-
 DESCRIPTION="A core services, APIs, and REST endpoints - to Jupyter web applications"
 HOMEPAGE="https://github.com/jupyter/jupyter_server"
 

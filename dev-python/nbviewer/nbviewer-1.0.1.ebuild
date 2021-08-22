@@ -9,7 +9,7 @@ inherit distutils-r1 git-r3
 DESCRIPTION="Nbconvert as a webservice (rendering ipynb to static HTML)"
 HOMEPAGE="https://nbviewer.jupyter.org/"
 EGIT_REPO_URI="https://github.com/jupyter/nbviewer.git"
-KEYWORDS=""
+KEYWORDS="~amd64"
 
 LICENSE="BSD"
 SLOT="0"

@@ -55,9 +55,9 @@ python_install() {
 
 pkg_postinst() {
 	if [ "$JUPYTERLAB_DIR" = "" ]; then
-        elog ""
-        elog "Before running jupyterlab in the existing shell please source"
-        elog "./etc/bash/bashrc.d/jupyterlab-assets.sh"
-        elog ""
-    fi
+		elog ""
+		elog "Before running jupyterlab in the existing shell please source"
+		elog "./etc/bash/bashrc.d/jupyterlab-assets.sh"
+		elog ""
+ 	fi
 }

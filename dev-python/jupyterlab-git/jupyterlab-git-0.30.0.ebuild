@@ -25,7 +25,7 @@ IUSE=""
 
 RDEPEND="
 	dev-python/notebook[${PYTHON_USEDEP}]
-	>=dev-python/jupyterlab-3.0[${PYTHON_USEDEP}]
+	>=dev-python/jupyterlab-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/nbdime-3.0.0[${PYTHON_USEDEP}]
 	dev-python/nbformat[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
@@ -36,10 +36,10 @@ RDEPEND="
 BDEPEND="${RDEPEND}"
 
 src_prepare() {
-	einfo
+	einfo ''
 	einfo 'Note, allowing network access from the sandbox via RESTRICT=network-sandbox'
 	einfo '(needed for building jupyterlab assets via npm)'
-	einfo
+	einfo ''
 	distutils-r1_src_prepare
 }
 

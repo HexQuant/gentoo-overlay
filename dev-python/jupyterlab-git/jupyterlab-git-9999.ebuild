@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Foundation
+# Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -25,7 +25,7 @@ IUSE=""
 
 RDEPEND="
 	dev-python/notebook[${PYTHON_USEDEP}]
-	>=dev-python/jupyterlab-3.0[${PYTHON_USEDEP}]
+	>=dev-python/jupyterlab-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/nbdime-3.1.0[${PYTHON_USEDEP}]
 	dev-python/nbformat[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
