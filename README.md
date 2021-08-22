@@ -5,7 +5,6 @@
 
 [![pkgcheck](https://github.com/HexQuant/gentoo-overlay/actions/workflows/pkgcheck.yml/badge.svg)](https://github.com/HexQuant/gentoo-overlay/actions/workflows/pkgcheck.yml)
 
-
 Mostly there are packages for analytics (python) and automation.
 
 **Installation**
