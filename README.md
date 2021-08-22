@@ -3,7 +3,7 @@
 
 **Gentoo Linux Personal Overlay**
 
-[![repoman](https://github.com/HexQuant/gentoo-overlay/actions/workflows/repoman.yml/badge.svg)](https://github.com/HexQuant/gentoo-overlay/actions/workflows/repoman.yml)
+[![pkgcheck](https://github.com/HexQuant/gentoo-overlay/actions/workflows/pkgcheck.yml/badge.svg)](https://github.com/HexQuant/gentoo-overlay/actions/workflows/pkgcheck.yml)
 
 
 Mostly there are packages for analytics (python) and automation.
