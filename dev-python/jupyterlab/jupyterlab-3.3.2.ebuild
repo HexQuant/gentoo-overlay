@@ -31,11 +31,10 @@ RDEPEND="
 	>=dev-python/jupyterlab_server-2.10[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_server-1.8[${PYTHON_USEDEP}]
 
-	>=dev-python/notebook_shim-0.1[${PYTHON_USEDEP}]
-	>=dev-python/jinja-3.0.3[${PYTHON_USEDEP}]
+	>=dev-python/nbclassic-0.2[${PYTHON_USEDEP}]
+	>=dev-python/jinja-2.1[${PYTHON_USEDEP}]
 	>=net-libs/nodejs-14
 
-	>=dev-python/nbclassic-0.2[${PYTHON_USEDEP}]
 	>=dev-python/jupyter-packaging-0.7.3[${PYTHON_USEDEP}]
 
 	ipympl? (

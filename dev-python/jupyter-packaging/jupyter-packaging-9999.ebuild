@@ -14,7 +14,7 @@ if [[ "${PV}" = *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/jupyter/jupyter-packaging.git"
 else
 	inherit distutils-r1
-	SRC_URI="https://github.com/jupyter/jupyter-packaging/archive/tags/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/jupyter/jupyter-packaging/archive/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 LICENSE="BSD"

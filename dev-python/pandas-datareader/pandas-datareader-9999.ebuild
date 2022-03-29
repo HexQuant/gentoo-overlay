@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{6..10} )
 
 DESCRIPTION="Pandas DataFrame extraction from a wide range of Internet sources"
 HOMEPAGE="https://github.com/pydata/pandas-datareader"
@@ -26,8 +26,8 @@ IUSE="doc"
 RESTRICT="test"
 
 RDEPEND="
-	>=dev-python/pandas-0.23[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
+	>=dev-python/pandas-0.23[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.19.0[${PYTHON_USEDEP}]
 	doc? (
 		dev-python/matplotlib[${PYTHON_USEDEP}]

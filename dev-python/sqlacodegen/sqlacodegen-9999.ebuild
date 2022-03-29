@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{6..10} )
+PYTHON_COMPAT=( python3_{7..10} )
 DESCRIPTION="Automatic model code generator for SQLAlchemy"
 HOMEPAGE="https://github.com/agronholm/sqlacodegen"
 
@@ -17,13 +17,13 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="
-	>=dev-python/sqlalchemy-1.3.0[${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/inflect-4.0.0[${PYTHON_USEDEP}]
-	$(python_gen_cond_dep 'dev-python/importlib_metadata[${PYTHON_USEDEP}]' pypy3 python3_{6,7})
-	$(python_gen_cond_dep 'dev-python/dataclasses[${PYTHON_USEDEP}]' pypy3 python3_6)
+	$(python_gen_cond_dep 'dev-python/importlib_metadata[${PYTHON_USEDEP}]'
+	pypy3 python3_{7..9})
 	"
 
 RDEPEND="${DEPEND}"

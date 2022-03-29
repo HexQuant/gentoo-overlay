@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{6..10} )
 
 DESCRIPTION="Notebook cell vim bindings"
 HOMEPAGE="https://github.com/axelfahy/jupyterlab-vim"

@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="A core services, APIs, and REST endpoints - to Jupyter web applications"
 HOMEPAGE="https://github.com/jupyter/jupyter_server"
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{7..10} )
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-python/pyzmq-17[${PYTHON_USEDEP}]
 	dev-python/argon2-cffi[${PYTHON_USEDEP}]
 	dev-python/ipython_genutils[${PYTHON_USEDEP}]
-	>=dev-python/traitlets-4.2.1[${PYTHON_USEDEP}]
+	>=dev-python/traitlets-5[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_core-4.6.0[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_client-6.1.1[${PYTHON_USEDEP}]
 	dev-python/nbformat[${PYTHON_USEDEP}]

@@ -3,9 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{6..9} )
-
-inherit distutils-r1
+PYTHON_COMPAT=( python3_{6..10} )
 
 DESCRIPTION="A JupyterLab extension for version control using Git"
 HOMEPAGE="https://github.com/jupyterlab/jupyterlab-git"

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{7..10} )
 
 DESCRIPTION="A multi-user server for Jupyter notebooks"
 HOMEPAGE="https://github.com/jupyterhub/jupyterhub"
@@ -27,8 +27,6 @@ RESTRICT=network-sandbox
 #dev-libs/kpathsea no mpl plots
 
 RDEPEND="
-	>=dev-python/async_generator-1.9[${PYTHON_USEDEP}]
-	dev-python/entrypoints[${PYTHON_USEDEP}]
 	>=dev-python/alembic-1.4[${PYTHON_USEDEP}]
 	>=dev-python/async_generator-1.9[${PYTHON_USEDEP}]
 	>=dev-python/certipy-0.1.2[${PYTHON_USEDEP}]
@@ -36,6 +34,7 @@ RDEPEND="
 	>=dev-python/jinja-2.11[${PYTHON_USEDEP}]
 	>=dev-python/jupyter-telemetry-0.1.0[${PYTHON_USEDEP}]
 	>=dev-python/oauthlib-3.0[${PYTHON_USEDEP}]
+	dev-python/packaging[${PYTHON_USEDEP}]
 	dev-python/pamela[${PYTHON_USEDEP}]
 	>=dev-python/prometheus_client-0.4.0[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
@@ -43,7 +42,6 @@ RDEPEND="
 	>=dev-python/sqlalchemy-1.1[${PYTHON_USEDEP}]
 	>=www-servers/tornado-5.1[${PYTHON_USEDEP}]
 	>=dev-python/traitlets-4.3.2[${PYTHON_USEDEP}]
-	dev-python/jupyter[${PYTHON_USEDEP}]
 	ldapauthenticator? ( dev-python/jupyterhub-ldapauthenticator[${PYTHON_USEDEP}] )
 "
 

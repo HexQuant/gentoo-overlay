@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{7..10} )
 
 DESCRIPTION="Statistical data visualization"
 HOMEPAGE="https://seaborn.pydata.org"
@@ -18,7 +18,7 @@ fi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+statsmodels +fastcluster"
 
 RDEPEND="
@@ -43,5 +43,6 @@ python_test() {
 	cat > matplotlibrc <<- EOF || die
 	backend : Agg
 	EOF
-	pytest -vv || die "Tests fail with ${EPYTHON}"
+	epytest
+	#pytest -vv || die "Tests fail with ${EPYTHON}"
 }

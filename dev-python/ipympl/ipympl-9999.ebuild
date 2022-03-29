@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{7..10} )
 
 DESCRIPTION="Matplotlib Jupyter Integration"
 HOMEPAGE="https://github.com/matplotlib/ipympl"
@@ -24,10 +24,17 @@ KEYWORDS=""
 RESTRICT="network-sandbox"
 
 DEPEND="
+
+	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/jupyter-packaging[${PYTHON_USEDEP}]
 	>=dev-python/ipykernel-4.7[${PYTHON_USEDEP}]
+
 	>=dev-python/ipywidgets-7.6.0[${PYTHON_USEDEP}]
-	>=dev-python/matplotlib-2.0.0[${PYTHON_USEDEP}]
+	<dev-python/ipywidgets-8[${PYTHON_USEDEP}]
+
+	>=dev-python/matplotlib-3.3.1[${PYTHON_USEDEP}]
+	<dev-python/matplotlib-4[${PYTHON_USEDEP}]
+
 	sys-apps/yarn
 "
 RDEPEND="${DEPEND}"

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{7..10} )
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
@@ -11,7 +11,7 @@ if [[ "${PV}" = *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/voila-dashboards/voila.git"
 else
 	inherit distutils-r1
-	SRC_URI="https://github.com/voila-dashboards/voila/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/voila-dashboards/voila/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 DESCRIPTION="Voila turns Jupyter notebooks into standalone web applications"
@@ -27,14 +27,22 @@ DEPEND="
 	>=dev-python/jupyter_server-0.3.0[${PYTHON_USEDEP}]
 	<dev-python/jupyter_server-2[${PYTHON_USEDEP}]
 
+	>=jupyterlab_server-2.3.0[${PYTHON_USEDEP}]
+	<jupyterlab_server-3[${PYTHON_USEDEP}]
+
 	>=dev-python/jupyter_client-6.1.3[${PYTHON_USEDEP}]
-	<dev-python/jupyter_client-7[${PYTHON_USEDEP}]
+	<dev-python/jupyter_client-8[${PYTHON_USEDEP}]
 
 	>=dev-python/nbclient-0.4.0[${PYTHON_USEDEP}]
 	<dev-python/nbclient-0.6[${PYTHON_USEDEP}]
 
-	>=dev-python/nbconvert-6.0.0[${PYTHON_USEDEP}]
+	>=dev-python/nbconvert-6.4.2[${PYTHON_USEDEP}]
 	<dev-python/nbconvert-7[${PYTHON_USEDEP}]
+
+	>=dev-python/websockets-9.0[${PYTHON_USEDEP}]
+
+	>=dev-python/traitlets-5.0.3[${PYTHON_USEDEP}]
+	<dev-python/traitlets-6[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
