@@ -10,7 +10,6 @@ HOMEPAGE="http://danifold.net/fastcluster.html"
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
-
 	EGIT_REPO_URI="https://github.com/dmuellner/fastcluster.git"
 else
 	inherit distutils-r1
@@ -20,7 +19,7 @@ fi
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="test"
+IUSE=""
 #RESTRICT="!test? ( test )"
 
 DEPEND="

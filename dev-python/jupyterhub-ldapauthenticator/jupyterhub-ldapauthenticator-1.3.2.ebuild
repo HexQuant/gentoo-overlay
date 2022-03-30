@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/jupyterhub/ldapauthenticator"
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
-
 	EGIT_REPO_URI="https://github.com/jupyterhub/ldapauthenticator.git"
 else
 	inherit distutils-r1

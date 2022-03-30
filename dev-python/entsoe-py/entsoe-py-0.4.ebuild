@@ -4,10 +4,10 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{6..9} )
-inherit distutils-r1
 
 DESCRIPTION="Python client for the ENTSO-E API"
 HOMEPAGE="https://github.com/EnergieID/entsoe-py"
+
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
 	EGIT_REPO_URI="https://github.com/EnergieID/entsoe-py.git"

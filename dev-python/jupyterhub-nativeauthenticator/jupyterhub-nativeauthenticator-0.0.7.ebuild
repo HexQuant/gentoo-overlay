@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/jupyterhub/nativeauthenticator"
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
-
 	EGIT_REPO_URI="https://github.com/jupyterhub/nativeauthenticator.git"
 else
 	inherit distutils-r1
@@ -20,7 +19,7 @@ fi
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="-test"
+IUSE=""
 
 DEPEND="
 	>=dev-python/jupyterhub-1.3[${PYTHON_USEDEP}]

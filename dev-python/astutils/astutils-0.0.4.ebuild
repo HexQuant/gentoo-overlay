@@ -10,7 +10,7 @@ inherit distutils-r1
 DESCRIPTION="Utilities for abstract syntax trees and parsing with PLY"
 
 HOMEPAGE="https://github.com/johnyf/astutils"
-SRC_URI="https://github.com/johnyf/astutils/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/johnyf/astutils/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

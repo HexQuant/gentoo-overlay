@@ -30,6 +30,5 @@ BDEPEND=""
 
 python_compile() {
 	distutils-r1_python_compile
-	jupyter serverextension enable --py jupyterlab_vim
-	jupyter labextension install @axlair/jupyterlab_vim
+	jupyter serverextension enable jupyterlab_vim
 }

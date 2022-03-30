@@ -4,7 +4,6 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{6..10} )
-inherit distutils-r1
 
 DESCRIPTION="Python client for the ENTSO-E API"
 HOMEPAGE="https://github.com/EnergieID/entsoe-py"
@@ -18,7 +17,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 DEPEND="
 	dev-python/requests[${PYTHON_USEDEP}]

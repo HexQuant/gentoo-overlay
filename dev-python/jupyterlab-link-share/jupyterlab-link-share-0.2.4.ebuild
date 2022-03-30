@@ -19,7 +19,7 @@ fi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-python/jupyter_server-1.11[${PYTHON_USEDEP}]

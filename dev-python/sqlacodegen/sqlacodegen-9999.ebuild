@@ -17,13 +17,12 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 DEPEND="
 	>=dev-python/sqlalchemy-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/inflect-4.0.0[${PYTHON_USEDEP}]
-	$(python_gen_cond_dep 'dev-python/importlib_metadata[${PYTHON_USEDEP}]'
-	pypy3 python3_{7..9})
+	$(python_gen_cond_dep 'dev-python/importlib_metadata[${PYTHON_USEDEP}]' python3_{7..9})
 	"
 
 RDEPEND="${DEPEND}"

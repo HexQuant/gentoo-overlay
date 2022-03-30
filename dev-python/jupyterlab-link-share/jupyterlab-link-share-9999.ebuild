@@ -10,7 +10,6 @@ PYTHON_COMPAT=( python3_{6..10} )
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
-
 	EGIT_REPO_URI="https://github.com/jupyterlab-contrib/jupyterlab-link-share.git"
 else
 	inherit distutils-r1

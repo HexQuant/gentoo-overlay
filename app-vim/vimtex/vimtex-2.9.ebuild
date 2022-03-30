@@ -3,7 +3,6 @@
 
 EAPI=7
 
-
 DESCRIPTION="VimTeX is a modern Vim and neovim filetype plugin for LaTeX files"
 HOMEPAGE="https://github.com/lervag/vimtex"
 

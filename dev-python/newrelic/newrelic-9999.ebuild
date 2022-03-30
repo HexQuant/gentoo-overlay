@@ -17,7 +17,7 @@ DESCRIPTION="New Relic Python Agent"
 HOMEPAGE="http://newrelic.com/docs/python/new-relic-for-python"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="

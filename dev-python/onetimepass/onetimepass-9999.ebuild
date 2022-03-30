@@ -20,7 +20,7 @@ fi
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
-IUSE="-test"
+IUSE=""
 
 DEPEND="dev-python/six[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"

@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/matplotlib/ipympl"
 
 if [[ "${PV}" = *9999* ]]; then
 	inherit distutils-r1 git-r3
-
 	EGIT_REPO_URI="https://github.com/matplotlib/ipympl"
 else
 	inherit distutils-r1
@@ -24,14 +23,13 @@ KEYWORDS=""
 RESTRICT="network-sandbox"
 
 DEPEND="
-
+	>=dev-python/ipython-8[${PYTHON_USEDEP}]
+	<dev-python/ipython-9[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/jupyter-packaging[${PYTHON_USEDEP}]
 	>=dev-python/ipykernel-4.7[${PYTHON_USEDEP}]
-
 	>=dev-python/ipywidgets-7.6.0[${PYTHON_USEDEP}]
 	<dev-python/ipywidgets-8[${PYTHON_USEDEP}]
-
 	>=dev-python/matplotlib-3.3.1[${PYTHON_USEDEP}]
 	<dev-python/matplotlib-4[${PYTHON_USEDEP}]
 
