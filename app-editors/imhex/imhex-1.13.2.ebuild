@@ -8,12 +8,21 @@ PYTHON_COMPAT=( python3_{8..9} )
 CMAKE_BUILD_TYPE="Release"
 CMAKE_MAKEFILE_GENERATOR="emake"
 
-inherit cmake git-r3 python-single-r1
+inherit cmake python-single-r1 git-r3
 
 DESCRIPTION="A hex editor for reverse engineers, programmers, and eyesight"
 HOMEPAGE="https://github.com/WerWolv/ImHex"
-EGIT_REPO_URI="https://github.com/WerWolv/ImHex.git"
+SRC_URI="https://github.com/WerWolv/ImHex/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/ImHex-${PV}"
 
+EGIT_REPO_URI="https://github.com/WerWolv/ImHex.git"
+EGIT_SUBMODULES=(
+	external/nativefiledialog
+	external/yara/yara
+	external/xdgpp
+	external/fmt
+	external/curl
+)
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
@@ -36,7 +45,7 @@ src_prepare() {
 }
 
 src_configure() {
-python-single-r1_pkg_setup
+	python-single-r1_pkg_setup
 	local mycmakeargs=(
 		-DPROJECT_VERSION="${PV}"
 		-DPYTHON_VERSION_MAJOR_MINOR="\"${EPYTHON/python/}\""
