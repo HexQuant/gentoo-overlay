@@ -7,17 +7,18 @@ PYTHON_COMPAT=( python3_{8..10} )
 DESCRIPTION="Read RiskSpectrum PSA results bin-files"
 HOMEPAGE="https://github.com/HexQuant/rsrfile"
 
+inherit distutils-r1
+
 if [[ "${PV}" = *9999* ]]; then
-	inherit distutils-r1 git-r3
+	inherit git-r3
 	EGIT_REPO_URI="https://github.com/HexQuant/rsrfile.git"
 else
-	inherit distutils-r1
 	SRC_URI="https://github.com/HexQuant/rsrfile/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""

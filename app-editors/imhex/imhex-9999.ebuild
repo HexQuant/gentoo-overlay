@@ -3,48 +3,88 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..9} )
+PYTHON_COMPAT=( python3_{8..10} )
+
+inherit git-r3 desktop xdg-utils python-single-r1 cmake
+
+DESCRIPTION="A hex editor for reverse engineers"
+HOMEPAGE="https://imhex.werwolv.net/"
+EGIT_REPO_URI="https://github.com/WerWolv/ImHex.git"
+EGIT_SUBMODULES=(
+	external/nativefiledialog
+	external/yara/yara
+	external/xdgpp
+	external/fmt
+	external/curl
+)
+EGIT_COMMIT="0717d4a"
+S="${WORKDIR}/ImHex-${PV}"
+EGIT_CHECKOUT_DIR="${S}"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+DEPEND="
+	${PYTHON_DEPS}
+	>=media-libs/glfw-3
+	media-libs/glm
+	sys-apps/file
+	dev-libs/openssl
+	dev-libs/capstone
+	sys-devel/llvm
+	dev-cpp/nlohmann_json
+	>=dev-lang/python-3
+	>=media-libs/freetype-2
+"
+RDEPEND="${DEPEND}"
+BDEPEND="
+	dev-util/cmake
+"
+PATCHES=("${FILESDIR}/${P}-gcc11.patch")
 
 CMAKE_BUILD_TYPE="Release"
 CMAKE_MAKEFILE_GENERATOR="emake"
 
-inherit cmake git-r3 python-single-r1
-
-DESCRIPTION="A hex editor for reverse engineers, programmers, and eyesight"
-HOMEPAGE="https://github.com/WerWolv/ImHex"
-EGIT_REPO_URI="https://github.com/WerWolv/ImHex.git"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS=""
-RESTRICT=network-sandbox
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-
-DEPEND=""
-RDEPEND="${DEPEND}
-		${PYTHON_DEPS}
-		media-libs/glfw
-		sys-apps/file
-		dev-cpp/nlohmann_json
-		x11-libs/gtk+
-		net-libs/mbedtls
-		"
-BDEPEND="${DEPEND}"
-
-src_prepare() {
-	cmake_src_prepare
-}
-
 src_configure() {
-python-single-r1_pkg_setup
 	local mycmakeargs=(
+		-Wno-dev
+		-DCMAKE_BUILD_TYPE=RelWithDebInfo
 		-DPROJECT_VERSION="${PV}"
-		-DPYTHON_VERSION_MAJOR_MINOR="\"${EPYTHON/python/}\""
-		-DUSE_SYSTEM_CURL=ON
-		-DUSE_SYSTEM_FMT=ON
-		-DUSE_SYSTEM_LLVM=ON
-		-DUSE_SYSTEM_NLOHMANN_JSON=ON
-		-DUSE_SYSTEM_YARA=ON
 	)
 	cmake_src_configure
+
+	## patching cmake_install directories
+	sed -i "s/\/lib\//\/$(get_libdir)\//g" ${BUILD_DIR}/cmake_install.cmake || \
+	sed -i "s/\/lib64\//\/$(get_libdir)\//g" ${BUILD_DIR}/cmake_install.cmake || \
+	die "Couldn't patch library path for multilib"
+}
+
+src_install() {
+	# can't use cmake_src_install, doing it manual
+	newbin ${BUILD_DIR}/${PN} ${PN}
+	newlib.so ${BUILD_DIR}/plugins/lib${PN}/lib${PN}.so lib${PN}.so
+	newins ${BUILD_DIR}/plugins/builtin/builtin.hexplug /usr/bin/builtin.hexplug
+
+	insinto /usr/share/${PN}
+	doins -r ${S}/python_libs/lib/.
+	doins ${S}/res/icon.ico
+
+	# create desktop icon
+	make_desktop_entry /opt/${PV}/bin/imhex "ImHex" /usr/share/${PN}/icon.ico "X-Editor"
+
+	# install docs
+	einstalldocs
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }

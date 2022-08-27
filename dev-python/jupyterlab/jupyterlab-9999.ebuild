@@ -5,21 +5,21 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{7..10} )
 
-if [[ "${PV}" = *9999* ]]; then
-	inherit distutils-r1 git-r3
+inherit distutils-r1
 
+if [[ "${PV}" = *9999* ]]; then
+	inherit git-r3
 	EGIT_REPO_URI="https://github.com/jupyterlab/jupyterlab.git"
 else
-	inherit distutils-r1
 	SRC_URI="https://github.com/jupyterlab/jupyterlab/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64"
 fi
 
 DESCRIPTION="The JupyterLab notebook server extension"
 HOMEPAGE="https://jupyter.org"
 
-LICENSE="BSD-2"
+LICENSE="BSD MIT GPL-3 Apache-2.0"
 SLOT="0"
-KEYWORDS=""
 
 IUSE="ipympl slurm collaborative"
 
@@ -29,7 +29,7 @@ RDEPEND="
 	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
 	dev-python/jupyter_core[${PYTHON_USEDEP}]
 	>=dev-python/jupyterlab_server-2.10[${PYTHON_USEDEP}]
-	>=dev-python/jupyter_server-1.8[${PYTHON_USEDEP}]
+	>=dev-python/jupyter_server-1.16[${PYTHON_USEDEP}]
 
 	>=dev-python/notebook_shim-0.1[${PYTHON_USEDEP}]
 	>=dev-python/jinja-3.0.3[${PYTHON_USEDEP}]
