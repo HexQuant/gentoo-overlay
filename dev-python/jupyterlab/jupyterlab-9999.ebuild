@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="ipympl slurm collaborative"
 
 RDEPEND="
-	dev-python/ipython[${PYTHON_USEDEP}]
+	dev-python/ipykernel[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
 	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
 	dev-python/jupyter_core[${PYTHON_USEDEP}]
