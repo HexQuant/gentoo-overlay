@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{7..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 
 inherit distutils-r1
 
@@ -25,11 +25,13 @@ SLOT="0"
 RESTRICT=network-sandbox
 
 DEPEND="
+	>=dev-python/jupyterlab-3.0[${PYTHON_USEDEP}]
+
 	>=dev-python/jupyter_server-1.18[${PYTHON_USEDEP}]
 	<dev-python/jupyter_server-2[${PYTHON_USEDEP}]
 
-	>=jupyterlab_server-2.3.0[${PYTHON_USEDEP}]
-	<jupyterlab_server-3[${PYTHON_USEDEP}]
+	>=dev-python/jupyterlab_server-2.3.0[${PYTHON_USEDEP}]
+	<dev-python/jupyterlab_server-3[${PYTHON_USEDEP}]
 
 	>=dev-python/jupyter_client-6.1.3[${PYTHON_USEDEP}]
 	<dev-python/jupyter_client-8[${PYTHON_USEDEP}]

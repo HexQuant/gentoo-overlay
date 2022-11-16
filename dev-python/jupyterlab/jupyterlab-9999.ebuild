@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{7..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 
 inherit distutils-r1
 
@@ -24,11 +24,12 @@ SLOT="0"
 IUSE="ipympl slurm collaborative"
 
 RDEPEND="
+	>=dev-python/async-lru-1.0.0[${PYTHON_USEDEP}]
 	dev-python/ipykernel[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
 	>=www-servers/tornado-6.1.0[${PYTHON_USEDEP}]
 	dev-python/jupyter_core[${PYTHON_USEDEP}]
-	>=dev-python/jupyterlab_server-2.10[${PYTHON_USEDEP}]
+	>=dev-python/jupyterlab_server-2.16[${PYTHON_USEDEP}]
 	>=dev-python/jupyter_server-1.16[${PYTHON_USEDEP}]
 
 	>=dev-python/notebook_shim-0.1[${PYTHON_USEDEP}]

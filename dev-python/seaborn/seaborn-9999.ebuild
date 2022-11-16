@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{7..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 
 DESCRIPTION="Statistical data visualization"
 HOMEPAGE="https://seaborn.pydata.org"
